@@ -55,16 +55,10 @@ export default function VerticalStripCarousel() {
   const [activeIndex, setActiveIndex] = useState(0)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const [selectedArtwork, setSelectedArtwork] = useState<(typeof artworks)[0] | null>(null)
-  const [isAnimating, setIsAnimating] = useState(false)
+
   const contactRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    if (selectedArtwork) {
-      setIsAnimating(true)
-      const timer = setTimeout(() => setIsAnimating(false), 2000)
-      return () => clearTimeout(timer)
-    }
-  }, [selectedArtwork])
+  
 
   const scrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -74,28 +68,30 @@ export default function VerticalStripCarousel() {
     <div
       className="min-h-screen flex flex-col items-center justify-between p-4 relative font-migra bg-cover bg-center"
       style={{
-        backgroundImage:
-          "url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/vangoghmuseum-d0105V1962-800.jpg-STGA2RJnOU08j7BcLGEEflRnb0INcq.jpeg')",
-        backgroundColor: "#ccab7e",
+        backgroundColor: "#2E394B",
         backgroundBlendMode: "overlay",
       }}
     >
-      <div className="absolute inset-0 bg-[#ccab7e]/30 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 bg-[#F9F6EE]/30 backdrop-blur-[2px]" />
 
       <div className="absolute top-4 left-4 z-10">
-        <h1 className="text-black text-xl font-medium">Vikas Vasudevan</h1>
+        <h1 className="Cinzel text-xl font-medium text-black">Vikas Vasudevan</h1>
+        <hr
+          className="mt-3 border-t border-white w-screen"
+          style={{ borderTopWidth: "0.1px" }}
+        />
       </div>
-      <nav className="w-full max-w-md mx-auto px-4 py-2 mb-8 relative z-10">
-        <ul className="flex justify-center space-x-8">
+      <nav className="absolute top-4 right-10 z-10 Cinzel" >
+        <ul className="flex justify-center space-x-5">
           <li>
-            <a href="#" className="text-black hover:text-gray-700 transition-colors font-medium">
-              Home
+            <a href="#" className="text-white font-light text-[14px]">
+              About
             </a>
           </li>
           <li>
             <a
               href="#"
-              className="text-black hover:text-gray-700 transition-colors font-medium"
+              className="text-white font-light text-[14px]"
               onClick={(e) => {
                 e.preventDefault()
                 scrollToContact()
@@ -107,7 +103,7 @@ export default function VerticalStripCarousel() {
         </ul>
       </nav>
 
-      <div className="relative w-full max-w-2xl mx-auto z-10">
+      <div className="relative w-full max-w-2xl mx-auto z-10 Cinzel mt-[50px]">
         <Carousel
           opts={{
             align: "center",
@@ -120,8 +116,8 @@ export default function VerticalStripCarousel() {
               <CarouselItem
                 key={artwork.id}
                 className={cn(
-                  "basis-[80px] transition-all duration-300 pl-0",
-                  hoveredIndex === index && "basis-[400px] z-50",
+                  "basis-[80px] transition-all ease-in-out duration-500 pl-0",
+                  hoveredIndex === index && "basis-[400px] z-50"
                 )}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
@@ -129,9 +125,8 @@ export default function VerticalStripCarousel() {
               >
                 <div
                   className={cn(
-                    "h-[500px] relative overflow-hidden rounded-sm transition-all duration-300 transform cursor-pointer",
-                    activeIndex === index ? "opacity-100 scale-110" : "opacity-70 scale-90",
-                    hoveredIndex === index && "scale-125 opacity-100 shadow-2xl",
+                    "h-[500px] relative overflow-hidden rounded-sm transition-all ease-in-out duration-500 transform cursor-pointer",
+                    activeIndex === index ? "opacity-100 scale-90" : "opacity-100 scale-90"
                   )}
                 >
                   <div className="h-full w-full flex items-center justify-center overflow-hidden">
@@ -146,8 +141,8 @@ export default function VerticalStripCarousel() {
                     />
                   </div>
                   {hoveredIndex === index && (
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                      <p className="text-white text-sm font-light">{artwork.title}</p>
+                    <div className="absolute bottom-0 left-0 right-0 bg-grat p-4">
+                      <p className="text-black text-sm font-light">{artwork.title}</p>
                     </div>
                   )}
                 </div>
@@ -157,7 +152,7 @@ export default function VerticalStripCarousel() {
         </Carousel>
       </div>
 
-      <div className="relative z-10 mt-16 text-black text-center max-w-4xl mx-auto">
+      <div className="relative z-10 mt-16 text-black text-center max-w-4xl mx-auto Cinzel">
         <div className="space-y-2 mb-8">
           <h2 className="text-6xl font-light tracking-wider">ENGINEER</h2>
           <h2 className="text-6xl font-light tracking-wider">&</h2>
@@ -172,38 +167,44 @@ export default function VerticalStripCarousel() {
 
       <div
         ref={contactRef}
-        className="w-full max-w-md mx-auto mt-16 p-6 bg-white/80 backdrop-blur-sm rounded-lg shadow-lg relative z-10"
+        className="w-full max-w-sm mx-auto mt-16 p-4 rounded relative z-10 Cinzel"
       >
-        <h2 className="text-3xl font-light mb-6 text-center">Contact Me</h2>
+        <h2 className="text-2xl font-light mb-4 text-center text-white">
+          Let's Get In Touch
+        </h2>
         <form className="space-y-4">
           <div>
-            <Input type="text" placeholder="Name" className="w-full" />
+            <Input
+              type="text"
+              placeholder="Name"
+              className="w-full p-2 border border-gray-200 rounded focus:outline-none"
+            />
           </div>
           <div>
-            <Input type="email" placeholder="Email" className="w-full" />
+            <Input
+              type="email"
+              placeholder="Email"
+              className="w-full p-2 border border-gray-200 rounded"
+            />
           </div>
           <div>
-            <Textarea placeholder="Message" className="w-full h-32" />
+            <Textarea
+              placeholder="Message"
+              className="w-full p-2 border border-gray-200 rounded h-24"
+            />
           </div>
-          <Button type="submit" className="w-full">
+          <Button type="submit" className="w-full p-2 border border-gray-200 rounded">
             Send
           </Button>
         </form>
       </div>
-
       {selectedArtwork && (
         <div
-          className={cn(
-            "fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-8 transition-opacity duration-2000",
-            isAnimating ? "opacity-0" : "opacity-100",
-          )}
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-8"
           onClick={() => setSelectedArtwork(null)}
         >
           <div
-            className={cn(
-              "w-full max-w-7xl flex flex-col md:flex-row gap-8 text-white transition-transform duration-2000",
-              isAnimating ? "translate-x-full" : "translate-x-0",
-            )}
+            className="w-full max-w-7xl flex flex-col md:flex-row gap-8 text-white transition-transform duration-300"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="md:w-1/2 space-y-6">
