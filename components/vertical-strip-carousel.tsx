@@ -66,13 +66,15 @@ export default function VerticalStripCarousel() {
 
   return (
     <div
-      className="min-h-screen flex flex-col items-center justify-between p-4 relative font-migra bg-cover bg-center"
+      className="min-h-screen flex flex-col items-center justify-between p-4 relative bg-cover bg-center"
       style={{
-        backgroundColor: "#2E394B",
-        backgroundBlendMode: "overlay",
+        backgroundImage: "url('/Background Saturn.jpg')",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
       }}
     >
-      <div className="absolute inset-0 bg-[#F9F6EE]/30 backdrop-blur-[2px]" />
+      
 
       <div className="absolute top-4 left-4 z-10">
         <h1 className="Cinzel text-xl font-medium text-black">Vikas Vasudevan</h1>
@@ -84,14 +86,14 @@ export default function VerticalStripCarousel() {
       <nav className="absolute top-4 right-10 z-10 Cinzel" >
         <ul className="flex justify-center space-x-5">
           <li>
-            <a href="#" className="text-white font-light text-[14px]">
+            <a href="#" className="text-white font-light text-[20px]">
               About
             </a>
           </li>
           <li>
             <a
               href="#"
-              className="text-white font-light text-[14px]"
+              className="text-white font-light text-[20px]"
               onClick={(e) => {
                 e.preventDefault()
                 scrollToContact()
@@ -152,17 +154,20 @@ export default function VerticalStripCarousel() {
         </Carousel>
       </div>
 
-      <div className="relative z-10 mt-16 text-black text-center max-w-4xl mx-auto Cinzel">
-        <div className="space-y-2 mb-8">
-          <h2 className="text-6xl font-light tracking-wider">ENGINEER</h2>
-          <h2 className="text-6xl font-light tracking-wider">&</h2>
-          <h2 className="text-6xl font-light tracking-wider">PROJECT MANAGER</h2>
+      <div className="relative z-10 mt-16 max-w-4xl mx-auto Cinzel">
+        <div className="flex flex-col md:flex-row justify-between items-start">
+          <div className="space-y-2 text-left pl-[-50px]">
+            <h2 className="text-6xl font-light tracking-wider">ENGINEER</h2>
+            <h2 className="text-2xl font-light tracking-wider">&</h2>
+            <h2 className="text-6xl font-light tracking-wider">PROJECT MANAGER</h2>
+          </div>
+          <div className="mt-4 md:mt-0 text-lg font-light leading-relaxed text-right max-w-md pr-[30px]">
+            <p>
+              Product Manager with 3 years of experience leading cross-functional teams 
+              to deliver innovative customer-centric products
+            </p>
+          </div>
         </div>
-
-        <p className="text-lg font-light mb-8 max-w-3xl mx-auto leading-relaxed">
-          PRODUCT MANAGER WITH 3 YEARS OF EXPERIENCE LEADING CROSS-FUNCTIONAL TEAMS TO DELIVER, INNOVATIVE
-          CUSTOMER-CENTRIC PRODUCTS
-        </p>
       </div>
 
       <div
