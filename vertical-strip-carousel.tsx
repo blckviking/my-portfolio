@@ -98,7 +98,7 @@ export default function VerticalStripCarousel() {
             align: "center",
           }}
           className="w-full"
-          onSelect={(index) => setActiveIndex(index)}
+          onSelect={(index) => setActiveIndex(Number(index))}
         >
           <CarouselContent className="flex items-center justify-center">
             {artworks.map((artwork, index) => (

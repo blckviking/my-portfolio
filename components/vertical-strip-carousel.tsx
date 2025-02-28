@@ -52,7 +52,7 @@ const artworks = [
 ]
 
 export default function VerticalStripCarousel() {
-  const [activeIndex, setActiveIndex] = useState(0)
+  const [activeIndex, setActiveIndex] = useState<number>(0)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const [selectedArtwork, setSelectedArtwork] = useState<(typeof artworks)[0] | null>(null)
 
@@ -71,7 +71,7 @@ export default function VerticalStripCarousel() {
         backgroundImage: "url('/Background Saturn.jpg')",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
+        backgroundPosition: "top",
       }}
     >
       
@@ -111,7 +111,7 @@ export default function VerticalStripCarousel() {
             align: "center",
           }}
           className="w-full"
-          onSelect={(index) => setActiveIndex(index)}
+          onSelect={(index) => setActiveIndex(Number(index))}
         >
           <CarouselContent className="flex items-center justify-center">
             {artworks.map((artwork, index) => (
