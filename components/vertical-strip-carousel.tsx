@@ -18,8 +18,18 @@ const artworks = [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/thumbnail4.jpg-f5kWtP0sEDJx5IxtXXUvFhZAYBI7pp.jpeg",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Main%201.jpg-G3NPoA7OQfq2X7ogdpG0NmrRh5ScM2.jpeg",
     title: "Road Safety",
-    description: "A COMPREHENSIVE OVERVIEW OF ROAD SAFETY MEASURES AND EMERGENCY RESPONSE PROTOCOLS",
+    description: `
+    
+    <h3 class="text-xl font-semibold mb-2">Illustration of the functional design of Safety Connect driver safety application. The app is designed to enhance vehicle safety and maintenance through innovative data-driven features.</h3>
+    <ul class="list-disc list-inside">
+    <li>The app creates a personalized narrative for each journey. Features are designed to offer trip analytics tailored to modern drivers, enhancing their awareness and safety.</li>
+    <li>Users receive a daily recap of their driving habits, encouraging self-improvement. The app focuses on highlighting key areas for improvement and providing actionable suggestions, helping users track their progress over time.</li>
+    <li>The app provides real-time damage graphs and predictive analysis to help users stay ahead of vehicle maintenance needs. It converts lagging data into actionable insights, alerting users to potential issues before they become critical.</li>
+    <li>The home screen is designed to condense vast amounts of data into key insights and scores. It displays important information such as driving scores, trip details, leaderboard status and weather alerts, ensuring users are informed without being overwhelmed.</li>
+    My Role for the Project - Lead Product manager
+`,
     category: "PUBLIC SAFETY, TRANSPORTATION",
+    pdf: "PRD1.pdf"
   },
   {
     id: 2,
@@ -27,8 +37,18 @@ const artworks = [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/thumbnail3.jpg-QFAgiJhvN74aCjU9MHMHouZTNDdMpm.jpeg",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Main%202.jpg-tu09BbbarZYVsOHNPwS5WExvCuUI4k.jpeg",
     title: "Process Connect",
-    description: "STREAMLINED TEMPLATE CREATION SYSTEM WITH INTEGRATED WORKFLOW MANAGEMENT AND COPILOT ASSISTANCE",
+    description: `
+    
+    <h3 class="text-xl font-semibold mb-2">Illustration of the functional design of the Process Safety application. The app is designed to streamline workflow management and enhance productivity through a user-friendly interface and powerful template creation tools.</h3>
+    <ul class="list-disc list-inside">
+    <li>The application aims to simplify workflow management by providing a robust yet user-friendly platform. By offering advanced template creation tools and AI-driven assistance, users can efficiently manage their tasks and maintain high productivity levels. The app is designed to handle complexity behind the scenes, allowing users to focus on what truly matters.</li>
+    <li>Multi-Step Template Creation simplifies the process of creating complex templates through a step-by-step interface. The form building Capabilities allow our clients to add various elements like forms, managers, navigation menus and workflows to their templates. Clients can add questions, manage evidence and set compliance options to ensure adherence to standards.</li>
+    <li>I have designed the app to act as a central hub for every task, module and actionable item, ensuring users stay on top of their workflow. The idea is to convert chaotic workflows into clear, manageable tasks.</li>
+    <li>For users who find the process too complex, the app offers a Copilot feature. Users can upload their documents, ask questions and let the AI handle the intricate details, providing a seamless experience.</li>
+    My Role for the Project - Lead Product manager
+`,
     category: "PRODUCTIVITY, AUTOMATION",
+    pdf: "PRD2.pdf"
   },
   {
     id: 3,
@@ -36,8 +56,18 @@ const artworks = [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/thumbnail1.jpg-etaAMUhQTtZ9dfFFLqeYhjZpWwmOMW.jpeg",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Main%203.jpg-Wytvt2wed3E5dD39WKFM5VBvR3p6Ns.jpeg",
     title: "Nuclear Propulsion",
-    description: "INNOVATIVE THORIUM-BASED NUCLEAR TURBO FAN DESIGN FOR NEXT-GENERATION AVIATION SYSTEMS",
+    description: `
+    
+    <h3 class="text-xl font-semibold mb-2">Illustration of the functional design of Safety Connect driver safety application. The app is designed to enhance vehicle safety and maintenance through innovative data-driven features.</h3>
+    <ul class="list-disc list-inside">
+    <li>The app creates a personalized narrative for each journey. Features are designed to offer trip analytics tailored to modern drivers, enhancing their awareness and safety.</li>
+    <li>Users receive a daily recap of their driving habits, encouraging self-improvement. The app focuses on highlighting key areas for improvement and providing actionable suggestions, helping users track their progress over time.</li>
+    <li>The app provides real-time damage graphs and predictive analysis to help users stay ahead of vehicle maintenance needs. It converts lagging data into actionable insights, alerting users to potential issues before they become critical.</li>
+    <li>The home screen is designed to condense vast amounts of data into key insights and scores. It displays important information such as driving scores, trip details, leaderboard status and weather alerts, ensuring users are informed without being overwhelmed.</li>
+    My Role for the Project - Lead Product manager
+`,
     category: "AEROSPACE, ENERGY",
+    pdf: "PRD3.pdf"
   },
   {
     id: 4,
@@ -46,8 +76,18 @@ const artworks = [
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Main%204-01.jpg-7ylsnA0gDuFfDQlfgi1iZrFN5D7wIu.jpeg",
     title: "CFD Analysis",
-    description: "COMPUTATIONAL FLUID DYNAMICS STUDY OF UNEQUALLY-SPACED AXIAL FLOW FANS FOR NOISE REDUCTION",
+    description: `
+    
+    <h3 class="text-xl font-semibold mb-2">Illustration of the functional design of Safety Connect driver safety application. The app is designed to enhance vehicle safety and maintenance through innovative data-driven features.</h3>
+    <ul class="list-disc list-inside">
+    <li>The app creates a personalized narrative for each journey. Features are designed to offer trip analytics tailored to modern drivers, enhancing their awareness and safety.</li>
+    <li>Users receive a daily recap of their driving habits, encouraging self-improvement. The app focuses on highlighting key areas for improvement and providing actionable suggestions, helping users track their progress over time.</li>
+    <li>The app provides real-time damage graphs and predictive analysis to help users stay ahead of vehicle maintenance needs. It converts lagging data into actionable insights, alerting users to potential issues before they become critical.</li>
+    <li>The home screen is designed to condense vast amounts of data into key insights and scores. It displays important information such as driving scores, trip details, leaderboard status and weather alerts, ensuring users are informed without being overwhelmed.</li>
+    My Role for the Project - Lead Product manager
+`,
     category: "ENGINEERING, ACOUSTICS",
+    pdf: "PRD4.pdf"
   },
 ]
 
@@ -58,7 +98,7 @@ export default function VerticalStripCarousel() {
 
   const contactRef = useRef<HTMLDivElement>(null)
 
-  
+
 
   const scrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -66,18 +106,21 @@ export default function VerticalStripCarousel() {
 
   return (
     <div
-      className="min-h-screen flex flex-col items-center justify-between p-4 relative bg-cover bg-center"
+      className="min-h-screen overflow-x-hidden flex flex-col items-center justify-between p-4 relative bg-cover"
       style={{
         backgroundImage: "url('/Background Saturn.jpg')",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "top",
+        backgroundPosition: "center bottom",
       }}
     >
-      
 
-      <div className="absolute top-4 left-4 z-10">
-        <h1 className="Cinzel text-xl font-medium text-black">Vikas Vasudevan</h1>
+
+      <div className="absolute top-4 left-4 z-10 flex flex-col">
+        <div className="flex items-center gap-2">
+          <img src="/logo.png" alt="Logo" className="w-auto" style={{height:"20px", width:"20px" }} />
+          <h1 className="Cinzel text-xl font-medium text-black">Vikas Vasudevan</h1>
+        </div>
         <hr
           className="mt-3 border-t border-white w-screen"
           style={{ borderTopWidth: "0.1px" }}
@@ -144,7 +187,7 @@ export default function VerticalStripCarousel() {
                   </div>
                   {hoveredIndex === index && (
                     <div className="absolute bottom-0 left-0 right-0 bg-grat p-4">
-                      <p className="text-black text-sm font-light">{artwork.title}</p>
+                      <p className="Cinzel text-white text-sm font-light">{artwork.title}</p>
                     </div>
                   )}
                 </div>
@@ -161,9 +204,9 @@ export default function VerticalStripCarousel() {
             <h2 className="text-2xl font-light tracking-wider">&</h2>
             <h2 className="text-6xl font-light tracking-wider">PROJECT MANAGER</h2>
           </div>
-          <div className="mt-4 md:mt-0 text-lg font-light leading-relaxed text-right max-w-md pr-[30px]">
+          <div className="mt-4 md:mt-0 text-lg font-light leading-relaxed text-right max-w-md pr-[0px]">
             <p>
-              Product Manager with 3 years of experience leading cross-functional teams 
+              Product Manager with 3 years of experience leading cross-functional teams
               to deliver innovative customer-centric products
             </p>
           </div>
@@ -182,62 +225,74 @@ export default function VerticalStripCarousel() {
             <Input
               type="text"
               placeholder="Name"
-              className="w-full p-2 border border-gray-200 rounded focus:outline-none"
+              className="w-full p-2 border-b border-gray-200 focus:outline-none bg-transparent"
             />
           </div>
           <div>
             <Input
               type="email"
               placeholder="Email"
-              className="w-full p-2 border border-gray-200 rounded"
+              className="w-full p-2 border-b border-gray-200 focus:outline-none bg-transparent"
             />
           </div>
           <div>
             <Textarea
               placeholder="Message"
-              className="w-full p-2 border border-gray-200 rounded h-24"
+              className="w-full p-2 border-b border-gray-200 focus:outline-none bg-transparent h-24"
             />
           </div>
-          <Button type="submit" className="w-full p-2 border border-gray-200 rounded">
+          <Button type="submit" className="w-full p-2 mt-4">
             Send
           </Button>
         </form>
       </div>
       {selectedArtwork && (
         <div
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-8"
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-8 h-screen"
           onClick={() => setSelectedArtwork(null)}
         >
           <div
-            className="w-full max-w-7xl flex flex-col md:flex-row gap-8 text-white transition-transform duration-300"
+            className="w-full max-w-6xl flex flex-col md:flex-row gap-8 text-white transition-transform duration-300"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="md:w-1/2 space-y-6">
+            <div className="md:w-1/2 space-y-6 pl-4 pb-4">
               <button
                 onClick={() => setSelectedArtwork(null)}
                 className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
               >
-                <ArrowLeft className="w-6 h-6" />
-                <span className="font-light">Back</span>
+                <ArrowLeft className="w-6 h-6 ml-[-10rem]" />
+                <span className="font-light ml-[2 rem]">Back</span>
               </button>
 
-              <h2 className="text-6xl font-light tracking-wider">{selectedArtwork.title}</h2>
-              <p className="text-lg font-light leading-relaxed">{selectedArtwork.description}</p>
+              <h2 className="Cinzel text-base font-light ml-[-10rem]">{selectedArtwork.title}</h2>
+              <div
+                className="Cinzel text-sm font-light  leading-relaxed ml-[-10rem]"
+                dangerouslySetInnerHTML={{ __html: selectedArtwork.description }}
+              />
 
               <div className="flex items-center justify-between pt-8 mt-auto">
-                <span className="text-sm font-light opacity-70">{selectedArtwork.category}</span>
-                <a href="#" className="text-sm font-light flex items-center gap-2 hover:opacity-70 transition-opacity">
-                  see case
+                <span className="Cinzel text-sm font-light ml-[-10rem]">{selectedArtwork.category}</span>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (selectedArtwork?.pdf) {
+                      window.open(selectedArtwork.pdf, "_blank");
+                    }
+                  }}
+                  className="Cinzel text-sm font-light flex items-center gap-2 hover:opacity-70 transition-opacity"
+                >
+                  For Nerds
                   <ArrowLeft className="w-4 h-4 rotate-180" />
                 </a>
               </div>
             </div>
 
-            <div className="md:w-1/2">
+            <div className="md:w-3/4 ml-auto">
               <img
                 src={selectedArtwork.image || "/placeholder.svg"}
                 alt={selectedArtwork.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>
