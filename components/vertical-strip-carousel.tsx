@@ -23,11 +23,15 @@ const artworks = [
     
     <h3 class="text-xl font-semibold mb-2">Illustration of the functional design of Safety Connect driver safety application. The app is designed to enhance vehicle safety and maintenance through innovative data-driven features.</h3>
     <ul class="list-disc list-inside">
-    <li>The app creates a personalized narrative for each journey. Features are designed to offer trip analytics tailored to modern drivers, enhancing their awareness and safety.</li>
-    <li>Users receive a daily recap of their driving habits, encouraging self-improvement. The app focuses on highlighting key areas for improvement and providing actionable suggestions, helping users track their progress over time.</li>
-    <li>The app provides real-time damage graphs and predictive analysis to help users stay ahead of vehicle maintenance needs. It converts lagging data into actionable insights, alerting users to potential issues before they become critical.</li>
-    <li>The home screen is designed to condense vast amounts of data into key insights and scores. It displays important information such as driving scores, trip details, leaderboard status and weather alerts, ensuring users are informed without being overwhelmed.</li>
-    My Role for the Project - Lead Product manager
+    <li>User Engagement - 30% increase in daily active users within the first six months</li>
+    <liSafety Improvement - 85% reduction in accident rates among their fleets</li>
+    <li>Feature Adoption - 80% of users actively engage with the app</li>
+    <li>User Engagement - 30% increase in daily active users within the first six months</li>
+    <li>Net Promoter Score (NPS) of 85 from corporate users</li>
+    <li>My Role for the Project - Lead Product manager</li>
+    <li>Teams Involved - Tech, Design, QA and Customer Success</li>
+    <li>Project Timeline - 4 years</li>
+    
 `,
     category: "PUBLIC SAFETY, TRANSPORTATION",
     pdf: "PRD1.pdf"
@@ -42,13 +46,15 @@ const artworks = [
     
     <h3 class="text-xl font-semibold mb-2">Illustration of the functional design of the Process Safety application. The app is designed to streamline workflow management and enhance productivity through a user-friendly interface and powerful template creation tools.</h3>
     <ul class="list-disc list-inside">
-    <li>The application aims to simplify workflow management by providing a robust yet user-friendly platform. By offering advanced template creation tools and AI-driven assistance, users can efficiently manage their tasks and maintain high productivity levels. The app is designed to handle complexity behind the scenes, allowing users to focus on what truly matters.</li>
-    <li>Multi-Step Template Creation simplifies the process of creating complex templates through a step-by-step interface. The form building Capabilities allow our clients to add various elements like forms, managers, navigation menus and workflows to their templates. Clients can add questions, manage evidence and set compliance options to ensure adherence to standards.</li>
-    <li>I have designed the app to act as a central hub for every task, module and actionable item, ensuring users stay on top of their workflow. The idea is to convert chaotic workflows into clear, manageable tasks.</li>
-    <li>For users who find the process too complex, the app offers a Copilot feature. Users can upload their documents, ask questions and let the AI handle the intricate details, providing a seamless experience.</li>
-    My Role for the Project - Lead Product manager
+    <li>User Engagement - 25% increase in overall productivity</li>
+    <liSafety Improvement - user satisfaction score of 90%, with users</li>
+    <li>Feature Adoption - 30% reduction in workflow errors</li>
+    <li>User Engagement - 60% of tasks completed has been assisted by the app's AI capabilities</li>
+    <li>My Role for the Project - Lead Product manager</li>
+    <li>Teams Involved - Tech, Design, QA and Customer Success</li>
+    <li>Project Timeline - 1 year</li>
 `,
-    category: "PRODUCTIVITY, AUTOMATION",
+    category: "PRODUCTIVITY, INDUSTRIAL SAFETY",
     pdf: "PRD2.pdf"
   },
   {
@@ -61,11 +67,12 @@ const artworks = [
     
     <h3 class="text-xl font-semibold mb-2">Illustration of the functional design of Safety Connect driver safety application. The app is designed to enhance vehicle safety and maintenance through innovative data-driven features.</h3>
     <ul class="list-disc list-inside">
-    <li>The app creates a personalized narrative for each journey. Features are designed to offer trip analytics tailored to modern drivers, enhancing their awareness and safety.</li>
-    <li>Users receive a daily recap of their driving habits, encouraging self-improvement. The app focuses on highlighting key areas for improvement and providing actionable suggestions, helping users track their progress over time.</li>
-    <li>The app provides real-time damage graphs and predictive analysis to help users stay ahead of vehicle maintenance needs. It converts lagging data into actionable insights, alerting users to potential issues before they become critical.</li>
-    <li>The home screen is designed to condense vast amounts of data into key insights and scores. It displays important information such as driving scores, trip details, leaderboard status and weather alerts, ensuring users are informed without being overwhelmed.</li>
-    My Role for the Project - Lead Product manager
+    <li>Thermal efficiency of 45%, surpassing traditional turbofan designs by 15%</li>
+    <li>20 dB reduction in noise levels compared to conventional turbofans</li>
+    <li>The turbo fan generated 30% more power per unit of thorium compared to existing nuclear propulsion systems</li>
+    <li>I was Awarded National Prize under NDRF India for my work on Nuclear Propulsion</li>
+    <li>Please note that all the above values are theoretical estimates, as I couldn't build a nuclear engine to prove them. Don't ask me why.</li>
+    <li>Project Timeline - 1 year</li>
 `,
     category: "AEROSPACE, ENERGY",
     pdf: "PRD3.pdf"
@@ -81,11 +88,11 @@ const artworks = [
     
     <h3 class="text-xl font-semibold mb-2">Illustration of the functional design of Safety Connect driver safety application. The app is designed to enhance vehicle safety and maintenance through innovative data-driven features.</h3>
     <ul class="list-disc list-inside">
-    <li>The app creates a personalized narrative for each journey. Features are designed to offer trip analytics tailored to modern drivers, enhancing their awareness and safety.</li>
-    <li>Users receive a daily recap of their driving habits, encouraging self-improvement. The app focuses on highlighting key areas for improvement and providing actionable suggestions, helping users track their progress over time.</li>
-    <li>The app provides real-time damage graphs and predictive analysis to help users stay ahead of vehicle maintenance needs. It converts lagging data into actionable insights, alerting users to potential issues before they become critical.</li>
-    <li>The home screen is designed to condense vast amounts of data into key insights and scores. It displays important information such as driving scores, trip details, leaderboard status and weather alerts, ensuring users are informed without being overwhelmed.</li>
-    My Role for the Project - Lead Product manager
+    <li>The CFD simulations achieved a 95% accuracy rate when compared to empirical data</li>
+    <li>The study demonstrated a 15% reduction in noise levels through the strategic use of unequally spaced blades</li>
+    <li>The research was published under Cranfield University as part of my Masters Thesis</li>
+    <li>I was awarded Propulsion Centre Scholarship from Cranfield as part of my previous work</li>
+    <li>Project Timeline - 1 year</li>
 `,
     category: "ENGINEERING, ACOUSTICS",
     pdf: "PRD4.pdf"
@@ -134,7 +141,7 @@ export default function VerticalStripCarousel() {
     }
   }
 
-
+  const aboutRef = useRef<HTMLDivElement>(null)
   const scrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" })
   }
@@ -164,7 +171,12 @@ export default function VerticalStripCarousel() {
       <nav className="absolute top-4 right-10 z-10 Cinzel" >
         <ul className="flex justify-center space-x-5">
           <li>
-            <a href="#" className="text-white font-light text-[20px]">
+            <a href="#" className="text-white font-light text-[20px]"
+              onClick={(e) => {
+                e.preventDefault()
+                aboutRef.current?.scrollIntoView({ behavior: "smooth" })
+              }}
+              >
               About
             </a>
           </li>
@@ -205,7 +217,7 @@ export default function VerticalStripCarousel() {
               >
                 <div
                   className={cn(
-                    "h-[500px] relative overflow-hidden rounded-sm transition-all ease-in-out duration-500 transform cursor-pointer",
+                    "h-[500px] relative overflow-hidden transition-all ease-in-out duration-200 transform cursor-pointer",
                     activeIndex === index ? "opacity-100 scale-90" : "opacity-100 scale-90"
                   )}
                 >
@@ -231,18 +243,17 @@ export default function VerticalStripCarousel() {
           </CarouselContent>
         </Carousel>
       </div>
-
-      <div className="relative z-10 mt-16 max-w-4xl mx-auto Cinzel">
+      
+      <div ref={aboutRef} className="relative z-10 mt-4 max-w-4xl mx-auto Cinzel">
         <div className="flex flex-col md:flex-row justify-between items-start">
           <div className="space-y-2 text-left pl-[-50px]">
             <h2 className="text-6xl font-light tracking-wider">ENGINEER</h2>
             <h2 className="text-2xl font-light tracking-wider">&</h2>
             <h2 className="text-6xl font-light tracking-wider">PROJECT MANAGER</h2>
           </div>
-          <div className="mt-4 md:mt-0 text-lg font-light leading-relaxed text-right max-w-md pr-[0px]">
+          <div className="mt-8 md:mt-0 text-lg font-light leading-relaxed text-right max-w-md pr-[0px] transform translate-y-4">
             <p>
-              Product Manager with 3 years of experience leading cross-functional teams
-              to deliver innovative customer-centric products
+              I am a Product Manager/Engineer based in India. I have many years of experience in consulting across all domains. My work is driven by a passion for creating intuitive and impactful user experiences.
             </p>
           </div>
         </div>
