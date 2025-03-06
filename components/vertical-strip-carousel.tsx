@@ -8,6 +8,7 @@ import { ArrowLeft } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
+import { set } from "date-fns"
 
 globalStyles()
 
@@ -95,9 +96,43 @@ export default function VerticalStripCarousel() {
   const [activeIndex, setActiveIndex] = useState<number>(0)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const [selectedArtwork, setSelectedArtwork] = useState<(typeof artworks)[0] | null>(null)
-
+  const [sendingMessage, setSendingMessage] = useState<boolean>(false)
   const contactRef = useRef<HTMLDivElement>(null)
+  // In your form component (e.g. inside VerticalStripCarousel component)
+  const handleSubmit = async (e: React.FormEvent) => {
+    setSendingMessage(true)
+    e.preventDefault()
 
+    const formData = new FormData(e.currentTarget as HTMLFormElement)
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    }
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+      const result = await res.json()
+      if (result.success) {
+        setSendingMessage(false)
+        alert("Message sent successfully!")
+      }
+      else{
+        setSendingMessage(false)
+        alert("Failed to send message.")
+      }
+    } catch (error) {
+      setSendingMessage(false)
+      console.error(error)
+      alert("Failed to send message.")
+    }
+  }
 
 
   const scrollToContact = () => {
@@ -118,7 +153,7 @@ export default function VerticalStripCarousel() {
 
       <div className="absolute top-4 left-4 z-10 flex flex-col">
         <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="Logo" className="w-auto" style={{height:"20px", width:"20px" }} />
+          <img src="/logo.png" alt="Logo" className="w-auto" style={{ height: "20px", width: "20px" }} />
           <h1 className="Cinzel text-xl font-medium text-black">Vikas Vasudevan</h1>
         </div>
         <hr
@@ -220,9 +255,10 @@ export default function VerticalStripCarousel() {
         <h2 className="text-2xl font-light mb-4 text-center text-white">
           Let's Get In Touch
         </h2>
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
             <Input
+              name="name"
               type="text"
               placeholder="Name"
               className="w-full p-2 border-b border-gray-200 focus:outline-none bg-transparent"
@@ -230,6 +266,7 @@ export default function VerticalStripCarousel() {
           </div>
           <div>
             <Input
+              name="email"
               type="email"
               placeholder="Email"
               className="w-full p-2 border-b border-gray-200 focus:outline-none bg-transparent"
@@ -237,12 +274,13 @@ export default function VerticalStripCarousel() {
           </div>
           <div>
             <Textarea
+              name="message"
               placeholder="Message"
               className="w-full p-2 border-b border-gray-200 focus:outline-none bg-transparent h-24"
             />
           </div>
           <Button type="submit" className="w-full p-2 mt-4">
-            Send
+          <span className={sendingMessage ? 'fas fa-spinner fa-pulse' : ''}>{!sendingMessage ? "Send" : ""}</span>
           </Button>
         </form>
       </div>

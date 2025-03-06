@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.vikasvasudevan.in
+
+# Sitemaps
+Sitemap: https://www.vikasvasudevan.in/sitemap.xml
