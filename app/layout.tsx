@@ -9,11 +9,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>Vikas Vasudevan - Engineer & Product Manager</title>
-        <meta name="description" content="Portfolio of Gunpreet Singh showcasing expertise in full stack development, cloud solutions, and project management." />
-        <meta name="keywords" content="Gunpreet Singh, Full Stack Developer, Tech Lead, Portfolio, Web Development, React.js, Node.js, Next.js" />
+        <meta name="description" content="Portfolio of Vikas Vasudevan showcasing expertise in full stack development, cloud solutions, and project management." />
+        <meta name="keywords" content="Vikas Vasudevan, Full Stack Developer, Tech Lead, Portfolio, Web Development, React.js, Node.js, Next.js" />
         <link rel="icon" href="/favicon.ico" />
-        <meta name="author" content="Gunpreet Singh" />
-        <meta property="og:title" content="Gunpreet Singh - Portfolio" />
+        <meta name="author" content="Vikas Vasudevan" />
+        <meta property="og:title" content="Vikas Vasudevan - Portfolio" />
         <meta property="og:description" content="Explore my projects, skills, and experience in tech development." />
         <meta property="og:url" content="https://www.vikasvasudevan.in" />
         <meta property="og:type" content="website" />
