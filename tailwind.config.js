@@ -7,9 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        migra: ['Migra', 'sans-serif'],
-      },
       borderColor: {
         border: 'var(--color-border)',
       },

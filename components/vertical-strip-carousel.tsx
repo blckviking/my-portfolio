@@ -161,14 +161,14 @@ export default function VerticalStripCarousel() {
       <div className="absolute top-4 left-4 z-10 flex flex-col">
         <div className="flex items-center gap-2">
           <img src="/logo.png" alt="Logo" className="w-auto" style={{ height: "20px", width: "20px" }} />
-          <h1 className="Cinzel text-xl font-medium text-black">Vikas Vasudevan</h1>
+          <h1 className="text-xl font-medium">Vikas Vasudevan</h1>
         </div>
         <hr
           className="mt-3 border-t border-white w-screen"
           style={{ borderTopWidth: "0.1px" }}
         />
       </div>
-      <nav className="absolute top-4 right-10 z-10 Cinzel" >
+      <nav className="absolute top-4 right-10 z-10" >
         <ul className="flex justify-center space-x-5">
           <li>
             <a href="#" className="text-white font-light text-[20px]"
@@ -195,7 +195,7 @@ export default function VerticalStripCarousel() {
         </ul>
       </nav>
 
-      <div className="relative w-full max-w-2xl mx-auto z-10 Cinzel mt-[50px]">
+      <div className="relative w-full max-w-2xl mx-auto z-10 mt-[50px]">
         <Carousel
           opts={{
             align: "center",
@@ -234,7 +234,7 @@ export default function VerticalStripCarousel() {
                   </div>
                   {hoveredIndex === index && (
                     <div className="absolute bottom-0 left-0 right-0 bg-grat p-4">
-                      <p className="Cinzel text-white text-sm font-light">{artwork.title}</p>
+                      <p className="text-white text-sm font-light">{artwork.title}</p>
                     </div>
                   )}
                 </div>
@@ -244,16 +244,16 @@ export default function VerticalStripCarousel() {
         </Carousel>
       </div>
       
-      <div ref={aboutRef} className="relative z-10 mt-4 max-w-4xl mx-auto Cinzel">
+      <div ref={aboutRef} className="relative z-10 mt-4 max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start">
           <div className="space-y-2 text-left pl-[-50px]">
             <h2 className="text-6xl font-light tracking-wider">ENGINEER</h2>
             <h2 className="text-2xl font-light tracking-wider">&</h2>
             <h2 className="text-6xl font-light tracking-wider">PROJECT MANAGER</h2>
           </div>
-          <div className="mt-8 md:mt-0 text-lg font-light leading-relaxed text-right max-w-md pr-[0px] transform translate-y-4">
+          <div className="mt-8 md:mt-0 text-lg font-light leading-relaxed text-right max-w-md pr-[0px] transform translate-y-4 translate-x-20">
             <p>
-              I am a Product Manager/Engineer based in India. I have many years of experience in consulting across all domains. My work is driven by a passion for creating intuitive and impactful user experiences.
+              I am a Product Manager/Engineer based in India. I have four years of experience in consulting across IT and Aerospace. My work is driven by a passion for creating intuitive and impactful user experiences.
             </p>
           </div>
         </div>
@@ -261,7 +261,7 @@ export default function VerticalStripCarousel() {
 
       <div
         ref={contactRef}
-        className="w-full max-w-sm mx-auto mt-16 p-4 rounded relative z-10 Cinzel"
+        className="w-full max-w-sm mx-auto mt-16 p-4 rounded relative z-10"
       >
         <h2 className="text-2xl font-light mb-4 text-center text-white">
           Let's Get In Touch
@@ -313,14 +313,14 @@ export default function VerticalStripCarousel() {
                 <span className="font-light ml-[2 rem]">Back</span>
               </button>
 
-              <h2 className="Cinzel text-base font-light ml-[-10rem]">{selectedArtwork.title}</h2>
+              <h2 className="text-base font-light ml-[-10rem]">{selectedArtwork.title}</h2>
               <div
-                className="Cinzel text-sm font-light  leading-relaxed ml-[-10rem]"
+                className="text-sm font-light  leading-relaxed ml-[-10rem]"
                 dangerouslySetInnerHTML={{ __html: selectedArtwork.description }}
               />
 
               <div className="flex items-center justify-between pt-8 mt-auto">
-                <span className="Cinzel text-sm font-light ml-[-10rem]">{selectedArtwork.category}</span>
+                <span className="text-sm font-light ml-[-10rem]">{selectedArtwork.category}</span>
                 <a
                   href="#"
                   onClick={(e) => {
@@ -329,7 +329,7 @@ export default function VerticalStripCarousel() {
                       window.open(selectedArtwork.pdf, "_blank");
                     }
                   }}
-                  className="Cinzel text-sm font-light flex items-center gap-2 hover:opacity-70 transition-opacity"
+                  className="text-sm font-light flex items-center gap-2 hover:opacity-70 transition-opacity"
                 >
                   For Nerds
                   <ArrowLeft className="w-4 h-4 rotate-180" />
