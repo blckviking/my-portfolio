@@ -14,6 +14,11 @@ module.exports = {
         background: "rgb(var(--background))",
         foreground: "rgb(var(--foreground))",
       },
+      fontFamily: {
+        sans: ['var(--font-inter)', 'sans-serif'],
+        raleway: ['var(--font-raleway)', 'sans-serif'],
+        playfair: ['var(--font-playfair)', 'serif'],
+      },
     },
   },
   plugins: [],

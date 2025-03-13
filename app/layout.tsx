@@ -1,10 +1,12 @@
+import { inter, raleway, playfair } from '@/lib/fonts';
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${raleway.variable} ${playfair.variable}`}>
       <head>
         <title>Vikas Vasudevan - Engineer & Product Manager</title>
         <meta name="description" content="Portfolio of Vikas Vasudevan showcasing expertise in product management, launching scalable solution and Engineering." />
