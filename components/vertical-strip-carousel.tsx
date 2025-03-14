@@ -21,12 +21,11 @@ const artworks = [
     title: "Road Safety",
     description: `
     
-    <h3 class="text-xl font-semibold mb-2">Illustration of the functional design of Safety Connect driver safety application. The app is designed to enhance vehicle safety and maintenance through innovative data-driven features.</h3>
+    <h3 class="text-xl font-semibold mb-2">Illustration of the functional design of Safety Connect driver safety application. The app is designed to enhance driver safety.</h3>
     <ul class="list-disc list-inside">
     <li>User Engagement - 30% increase in daily active users within the first six months</li>
     <liSafety Improvement - 85% reduction in accident rates among their fleets</li>
     <li>Feature Adoption - 80% of users actively engage with the app</li>
-    <li>User Engagement - 30% increase in daily active users within the first six months</li>
     <li>Net Promoter Score (NPS) of 85 from corporate users</li>
     <li>My Role for the Project - Lead Product manager</li>
     <li>Teams Involved - Tech, Design, QA and Customer Success</li>
@@ -65,7 +64,7 @@ const artworks = [
     title: "Nuclear Propulsion",
     description: `
     
-    <h3 class="text-xl font-semibold mb-2">Illustration of the functional design of Safety Connect driver safety application. The app is designed to enhance vehicle safety and maintenance through innovative data-driven features.</h3>
+    <h3 class="text-xl font-semibold mb-2">Illustration of the functional design Thoruim Powered Nuclear Reator for modern Gas Turbines.</h3>
     <ul class="list-disc list-inside">
     <li>Thermal efficiency of 45%, surpassing traditional turbofan designs by 15%</li>
     <li>20 dB reduction in noise levels compared to conventional turbofans</li>
@@ -86,7 +85,7 @@ const artworks = [
     title: "CFD Analysis",
     description: `
     
-    <h3 class="text-xl font-semibold mb-2">Illustration of the functional design of Safety Connect driver safety application. The app is designed to enhance vehicle safety and maintenance through innovative data-driven features.</h3>
+    <h3 class="text-xl font-semibold mb-2">CFD Study of Aerodynamics of Unequally Spaced Axial Flow Fans for Noise Reduction.</h3>
     <ul class="list-disc list-inside">
     <li>The CFD simulations achieved a 95% accuracy rate when compared to empirical data</li>
     <li>The study demonstrated a 15% reduction in noise levels through the strategic use of unequally spaced blades</li>
