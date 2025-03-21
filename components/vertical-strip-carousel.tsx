@@ -43,7 +43,7 @@ const artworks = [
     title: "Process Connect",
     description: `
     
-    <h3 class="text-xl font-semibold mb-2">Illustration of the functional design of the Process Safety application. The app is designed to streamline workflow management and enhance productivity through a user-friendly interface and powerful template creation tools.</h3>
+    <h3 class="text-xl font-semibold mb-2">Illustration of the functional design of the Process Safety application. The app is designed to streamline workflow management and enhance productivity.</h3>
     <ul class="list-disc list-inside">
     <li>User Engagement - 25% increase in overall productivity</li>
     <liSafety Improvement - user satisfaction score of 90%, with users</li>
@@ -156,43 +156,49 @@ export default function VerticalStripCarousel() {
       }}
     >
 
+      <div className="absolute top-4 left-0 right-0 z-10 flex flex-col px-6">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <img src="/logo.png" alt="Logo" className="w-5 h-5" />
+            <h1 className="text-base md:text-xl font-medium">Vikas Vasudevan</h1>
+          </div>
 
-      <div className="absolute top-4 left-4 z-10 flex flex-col">
-        <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="Logo" className="w-auto" style={{ height: "20px", width: "20px" }} />
-          <h1 className="text-xl font-medium">Vikas Vasudevan</h1>
+          <nav>
+            <ul className="flex justify-center space-x-3 md:space-x-5">
+              <li>
+                <a
+                  href="#"
+                  className="text-white font-light text-sm md:text-[20px]"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    aboutRef.current?.scrollIntoView({ behavior: "smooth" })
+                  }}
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-white font-light text-sm md:text-[20px]"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToContact()
+                  }}
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
         <hr
-          className="mt-3 border-t border-white w-screen"
+          className="mt-3 border-t border-white w-full"
           style={{ borderTopWidth: "0.1px" }}
         />
       </div>
-      <nav className="absolute top-4 right-10 z-10" >
-        <ul className="flex justify-center space-x-5">
-          <li>
-            <a href="#" className="text-white font-light text-[20px]"
-              onClick={(e) => {
-                e.preventDefault()
-                aboutRef.current?.scrollIntoView({ behavior: "smooth" })
-              }}
-              >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-white font-light text-[20px]"
-              onClick={(e) => {
-                e.preventDefault()
-                scrollToContact()
-              }}
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
+      
+      
 
       <div className="relative w-full max-w-2xl mx-auto z-10 mt-[50px]">
         <Carousel
@@ -243,14 +249,14 @@ export default function VerticalStripCarousel() {
         </Carousel>
       </div>
       
-      <div ref={aboutRef} className="relative z-10 mt-4 max-w-4xl mx-auto">
+      <div ref={aboutRef} className="relative z-10 mt-4 w-full max-w-4xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start">
-          <div className="space-y-2 text-left pl-[-50px]">
-            <h2 className="text-6xl font-light tracking-wider">ENGINEER</h2>
-            <h2 className="text-2xl font-light tracking-wider">&</h2>
-            <h2 className="text-6xl font-light tracking-wider">PROJECT MANAGER</h2>
+          <div className="space-y-2 text-left">
+            <h2 className="text-4xl md:text-6xl font-light tracking-wider">ENGINEER</h2>
+            <h2 className="text-xl md:text-2xl font-light tracking-wider">&</h2>
+            <h2 className="text-4xl md:text-6xl font-light tracking-wider">PROJECT MANAGER</h2>
           </div>
-          <div className="mt-8 md:mt-0 text-lg font-light leading-relaxed text-right max-w-md pr-[0px] transform translate-y-4 translate-x-20">
+          <div className="mt-6 md:mt-0 text-base md:text-lg font-light leading-relaxed text-left md:text-right max-w-full md:max-w-md md:transform md:translate-y-4 md:translate-x-20">
             <p>
               I am a Product Manager/Engineer based in India. I have four years of experience in consulting across IT and Aerospace. My work is driven by a passion for creating intuitive and impactful user experiences.
             </p>
@@ -296,30 +302,30 @@ export default function VerticalStripCarousel() {
       </div>
       {selectedArtwork && (
         <div
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-8 h-screen"
+          className="fixed inset-0 bg-black/90 z-50 flex items-start md:items-center justify-center p-4 h-screen overflow-y-auto"
           onClick={() => setSelectedArtwork(null)}
         >
           <div
-            className="w-full max-w-6xl flex flex-col md:flex-row gap-8 text-white transition-transform duration-300"
+            className="w-full max-w-6xl flex flex-col md:flex-row gap-4 md:gap-8 text-white transition-transform duration-300 pt-12 md:pt-0"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="md:w-1/2 space-y-6 pl-4 pb-4">
+            <div className="w-full md:w-1/2 space-y-4 md:space-y-6 px-2 md:pl-4 pb-4">
               <button
                 onClick={() => setSelectedArtwork(null)}
                 className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
               >
-                <ArrowLeft className="w-6 h-6 ml-[-10rem]" />
-                <span className="font-light ml-[2 rem]">Back</span>
+                <ArrowLeft className="w-5 h-5" />
+                <span className="font-light">Back</span>
               </button>
 
-              <h2 className="text-base font-light ml-[-10rem]">{selectedArtwork.title}</h2>
+              <h2 className="text-base font-light">{selectedArtwork.title}</h2>
               <div
-                className="text-sm font-light  leading-relaxed ml-[-10rem]"
+                className="text-sm font-light leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: selectedArtwork.description }}
               />
 
-              <div className="flex items-center justify-between pt-8 mt-auto">
-                <span className="text-sm font-light ml-[-10rem]">{selectedArtwork.category}</span>
+              <div className="flex items-center justify-between pt-4 md:pt-8 mt-auto">
+                <span className="text-sm font-light">{selectedArtwork.category}</span>
                 <a
                   href="#"
                   onClick={(e) => {
@@ -336,16 +342,16 @@ export default function VerticalStripCarousel() {
               </div>
             </div>
 
-            <div className="md:w-3/4 ml-auto">
+            <div className="w-full md:w-3/4 md:ml-auto">
               <img
                 src={selectedArtwork.image || "/placeholder.svg"}
                 alt={selectedArtwork.title}
-                className="w-full h-full object-contain"
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
         </div>
-      )}
+      )}  
     </div>
   )
 }
